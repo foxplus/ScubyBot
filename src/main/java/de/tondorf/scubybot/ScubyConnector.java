@@ -16,11 +16,9 @@ import de.tdng2011.game.library.World;
  */
 public class ScubyConnector extends AbstractClient{
 
-  private String PlayerName;
-  public String name(){
-      if (PlayerName.length() == 0 ){
-          PlayerName = "DefaultName";
-      }
+  private String PlayerName = "DefaultName";
+
+  public String name(){      
       return PlayerName;
   }
   public ScubyConnector(final String hostname, final String PlayerName){

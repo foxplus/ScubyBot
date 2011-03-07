@@ -137,8 +137,13 @@ public class frmHelloSwing extends javax.swing.JFrame {
 
         if ((btnToggleConnect.isSelected())) {
            // hier wird angemeldet
+           txtArLogMessages.setText(txtArLogMessages.getText() + "\nVerbinde mit Server: " + txtServerIP.getText() );
+           txtArLogMessages.setText(txtArLogMessages.getText() + "\nSpielername        : " + txtPlayerName.getText() );
            if (MainConnection == null) {
-               MainConnection = new ScubyConnector(lblServerIP.getText(), lblPlayerName.getText());
+               MainConnection = new ScubyConnector(txtServerIP.getText(), txtPlayerName.getText());
+           }
+           else{
+            //   MainConnection.
            }
         }else{
            // hier wird abgemeldet
