@@ -43,7 +43,17 @@
                     <version>1.4.4.1</version>
                     <configuration>
                             <mainClass>de.tondorf.scubybot.Main</mainClass>
-                    </configuration>
+			    <filename>${project.build.finalName}.runnable.jar</filename>
+		    </configuration>
+		    <executions>
+			    <execution>
+				    <id>make-jar</id>
+				    <phase>package</phase>
+				    <goals>
+					    <goal>one-jar</goal>
+				    </goals>
+			    </execution>
+		    </executions>
             </plugin>
     </plugins>
 </build>
