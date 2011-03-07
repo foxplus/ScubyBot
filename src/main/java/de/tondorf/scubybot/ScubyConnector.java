@@ -18,12 +18,12 @@ public class ScubyConnector extends AbstractClient{
 
   private String PlayerName = "DefaultName";
 
-  public String name(){      
-      return PlayerName;
+  public String name(){
+      return "DEFAULT";
   }
   public ScubyConnector(final String hostname, final String PlayerName){
       super(hostname, RelationTypes.Player());
-      this.PlayerName = PlayerName;
+      //this.PlayerName = PlayerName;
   }
 
   public void processWorld(World world){
